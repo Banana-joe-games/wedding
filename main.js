@@ -23,11 +23,10 @@ const heroH = document.querySelector('.hero').offsetHeight;
 function updateNav() {
   const past = window.scrollY > heroH - 80;
   if (past) {
-    nav.style.background = 'rgba(244,241,237,0.82)';
-    nav.style.backdropFilter = 'blur(16px)';
-    nav.style.WebkitBackdropFilter = 'blur(16px)';
-    nav.style.mixBlendMode = 'normal';
-    nav.style.borderBottom = '1px solid rgba(61,23,41,0.08)';
+    nav.style.background = 'rgba(204,198,188,0.65)';
+    nav.style.backdropFilter = 'blur(20px)';
+    nav.style.WebkitBackdropFilter = 'blur(20px)';
+    nav.style.borderBottom = 'none';
     nav.classList.remove('nav-hero');
   } else {
     nav.style.background = '';
