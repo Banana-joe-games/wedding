@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Julia & Andrea — 13 Giugno 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Display:ital,wdth,wght@0,62.5,300;0,62.5,400;0,62.5,700;1,62.5,300;1,62.5,400&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- FIXED BACKGROUND — bokeh + grain behind everything -->
+  <div class="site-bg" aria-hidden="true">
+    <div class="hero-bg"></div>
+    <div class="hero-bokeh b1"></div>
+    <div class="hero-bokeh b2"></div>
+    <div class="hero-bokeh b3"></div>
+    <div class="hero-bokeh b4"></div>
+    <div class="hero-bokeh b5"></div>
+    <div class="hero-bokeh b6"></div>
+    <div class="hero-bokeh b7"></div>
+    <div class="hero-bokeh b8"></div>
+    <div class="hero-noise"></div>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <span class="nav-logo">J &amp; A</span>
+    <ul class="nav-links">
+      <li><a href="#programma">Programma</a></li>
+      <li><a href="#navetta">Navetta</a></li>
+      <li><a href="#rsvp">RSVP</a></li>
+      <li><a href="#dresscode">Dress Code</a></li>
+      <li><a href="#location">Location</a></li>
+      <li><a href="#info">Info</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="hero-label">Save the Date</p>
+      <h1 class="hero-title">JULIA &amp; ANDREA</h1>
+      <div class="hero-date">
+        <span class="hero-date-big">13</span>
+        <div class="hero-date-right">
+          <span class="hero-date-month">Giugno</span>
+          <span class="hero-date-year">2026</span>
+        </div>
+      </div>
+      <p class="hero-sub">Sabato · ore 16:00 · Villa Walter Fontana</p>
+    </div>
+    <a href="#programma" class="hero-scroll" aria-label="Scorri">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <line x1="12" y1="4" x2="12" y2="20" stroke="currentColor" stroke-width="1.2"/>
+        <polyline points="6,14 12,20 18,14" stroke="currentColor" stroke-width="1.2" fill="none"/>
+      </svg>
+    </a>
+  </section>
+
+  <!-- PROGRAMMA -->
+  <section class="section" id="programma">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Il Giorno</p>
+        <h2 class="section-title">Programma</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-time">16:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Cerimonia</h3>
+            <p>Villa Walter Fontana, Capriano</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">17:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Aperitivo</h3>
+            <p>Nel parco secolare della villa</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">19:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Cena</h3>
+            <p>Sotto le stelle di Brianza</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-time">22:00</div>
+          <div class="timeline-dot"></div>
+          <div class="timeline-body">
+            <h3>Dopo Cena</h3>
+            <p>Musica e brindisi fino alle 02:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NAVETTA (solo info) -->
+  <section class="section section-navetta" id="navetta">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Trasporto</p>
+        <h2 class="section-title">Servizio Navetta</h2>
+      </div>
+
+      <div class="navetta-intro">
+        <p class="navetta-desc">Abbiamo organizzato un servizio navetta da Milano alla villa e ritorno. Segnalateci se ne avrete bisogno nella conferma di partecipazione qui sotto.</p>
+        <div class="navetta-route">
+          <div class="navetta-route-point">
+            <span class="navetta-route-label">Partenza</span>
+            <span class="navetta-route-place">Milano, Piazza della Repubblica</span>
+          </div>
+          <svg class="navetta-route-arrow" width="40" height="16" viewBox="0 0 40 16" fill="none" stroke="currentColor" stroke-width="1.2">
+            <line x1="0" y1="8" x2="36" y2="8"/>
+            <polyline points="30,2 36,8 30,14"/>
+          </svg>
+          <div class="navetta-route-point">
+            <span class="navetta-route-label">Arrivo</span>
+            <span class="navetta-route-place">Villa Walter Fontana, Capriano</span>
+          </div>
+        </div>
+
+        <div class="navetta-schedule">
+          <div class="navetta-trip">
+            <span class="navetta-trip-dir">Andata</span>
+            <span class="navetta-trip-time">ore 15:00</span>
+          </div>
+          <div class="navetta-trip">
+            <span class="navetta-trip-dir">Ritorno</span>
+            <span class="navetta-trip-time">ore 00:00</span>
+          </div>
+          <div class="navetta-trip">
+            <span class="navetta-trip-dir">Ritorno</span>
+            <span class="navetta-trip-time">ore 02:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RSVP -->
+  <section class="section section-rsvp" id="rsvp">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Conferma</p>
+        <h2 class="section-title">Ci sarai?</h2>
+      </div>
+      <div class="rsvp-buttons">
+        <button class="rsvp-btn rsvp-btn-yes" id="rsvp-yes">Ci sarò</button>
+        <button class="rsvp-btn rsvp-btn-no" id="rsvp-no">Non ci sarò</button>
+      </div>
+      <p class="rsvp-feedback" id="rsvp-feedback"></p>
+    </div>
+  </section>
+
+  <!-- RSVP MODAL -->
+  <div class="modal-overlay" id="rsvp-modal">
+    <div class="modal" role="dialog" aria-labelledby="modal-title">
+      <button class="modal-close" id="modal-close" aria-label="Chiudi">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+        </svg>
+      </button>
+
+      <h3 class="modal-title" id="modal-title">Conferma Partecipazione</h3>
+
+      <form id="rsvp-form">
+        <!-- Step 1: Dati personali -->
+        <div class="modal-step" id="step-1">
+          <p class="modal-step-label">1 / 3 — I tuoi dati</p>
+          <div class="modal-form-row">
+            <div class="modal-field">
+              <label for="rsvp-nome">Nome</label>
+              <input type="text" id="rsvp-nome" name="nome" required />
+            </div>
+            <div class="modal-field">
+              <label for="rsvp-cognome">Cognome</label>
+              <input type="text" id="rsvp-cognome" name="cognome" required />
+            </div>
+          </div>
+          <button type="button" class="modal-next" id="step-1-next">Avanti</button>
+        </div>
+
+        <!-- Step 2: +1 -->
+        <div class="modal-step" id="step-2" style="display:none;">
+          <p class="modal-step-label">2 / 3 — Accompagnatore</p>
+          <div class="modal-field">
+            <label>Hai un accompagnatore?</label>
+            <div class="rsvp-toggle-row">
+              <button type="button" class="rsvp-toggle active" data-plus="no">No</button>
+              <button type="button" class="rsvp-toggle" data-plus="yes">Sì</button>
+            </div>
+          </div>
+          <div id="plus-fields" style="display:none;">
+            <div class="modal-form-row">
+              <div class="modal-field">
+                <label for="rsvp-plus-nome">Nome +1</label>
+                <input type="text" id="rsvp-plus-nome" name="plus_nome" />
+              </div>
+              <div class="modal-field">
+                <label for="rsvp-plus-cognome">Cognome +1</label>
+                <input type="text" id="rsvp-plus-cognome" name="plus_cognome" />
+              </div>
+            </div>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back" id="step-2-back">Indietro</button>
+            <button type="button" class="modal-next" id="step-2-next">Avanti</button>
+          </div>
+        </div>
+
+        <!-- Step 3: Navetta -->
+        <div class="modal-step" id="step-3" style="display:none;">
+          <p class="modal-step-label">3 / 3 — Navetta</p>
+          <div class="modal-field">
+            <label>Vi serve la navetta?</label>
+            <div class="rsvp-toggle-row">
+              <button type="button" class="rsvp-toggle rsvp-shuttle active" data-shuttle="no">No</button>
+              <button type="button" class="rsvp-toggle rsvp-shuttle" data-shuttle="yes">Sì</button>
+            </div>
+          </div>
+          <div id="shuttle-fields" style="display:none;">
+            <fieldset class="navetta-fieldset">
+              <legend>Quali corse?</legend>
+              <div class="navetta-checks">
+                <label class="navetta-check">
+                  <input type="checkbox" name="corsa_andata_15" value="Andata 15:00" />
+                  <span class="navetta-check-box"></span>
+                  <span>Andata — ore 15:00</span>
+                </label>
+                <label class="navetta-check">
+                  <input type="checkbox" name="corsa_ritorno_00" value="Ritorno 00:00" />
+                  <span class="navetta-check-box"></span>
+                  <span>Ritorno — ore 00:00</span>
+                </label>
+                <label class="navetta-check">
+                  <input type="checkbox" name="corsa_ritorno_02" value="Ritorno 02:00" />
+                  <span class="navetta-check-box"></span>
+                  <span>Ritorno — ore 02:00</span>
+                </label>
+              </div>
+            </fieldset>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back" id="step-3-back">Indietro</button>
+            <button type="submit" class="modal-next modal-submit" id="rsvp-submit">Invia</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- DRESS CODE -->
+  <section class="section section-dresscode" id="dresscode">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Per la Giornata</p>
+        <h2 class="section-title">Dress Code</h2>
+      </div>
+
+      <div class="dc-grid">
+        <div class="dc-col">
+          <h3 class="dc-heading">Abbigliamento</h3>
+          <p class="dc-body">
+            Il dress code è <strong>formale</strong>. Accogliamo con piacere ogni stile e tradizione culturale — siete liberi di indossare l'abbigliamento tradizionale della vostra cultura.
+          </p>
+          <p class="dc-body">
+            Per chi sceglie l'abito formale occidentale, vi invitiamo a ispirarvi alla nostra palette o a optare per un classico abito scuro. <strong>Si prega di evitare il nero.</strong>
+          </p>
+          <div class="palette">
+            <div class="palette-item">
+              <div class="swatch" style="background:#3D1729;"></div>
+              <span>Wine</span>
+            </div>
+            <div class="palette-item">
+              <div class="swatch" style="background:#C4B49A;"></div>
+              <span>Sabbia</span>
+            </div>
+            <div class="palette-item">
+              <div class="swatch" style="background:#8A9E87;"></div>
+              <span>Salvia</span>
+            </div>
+            <div class="palette-item">
+              <div class="swatch" style="background:#EAE2DA; outline: 1px solid #D8D0C8;"></div>
+              <span>Cipria</span>
+            </div>
+            <div class="palette-item palette-no">
+              <div class="swatch" style="background:#111111;"></div>
+              <span>✕ Nero</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="dc-col">
+          <h3 class="dc-heading">Note Pratiche</h3>
+          <div class="dc-note">
+            <p class="dc-note-label">Per le signore</p>
+            <p class="dc-body">La cerimonia e il ricevimento si svolgeranno in parte su <strong>prato</strong>. Saranno messi a vostra disposizione dei salva tacchi, tuttavia vi consigliamo di portare con voi un paio di scarpe comode come cambio per i momenti all'aperto.</p>
+          </div>
+          <div class="dc-note">
+            <p class="dc-note-label">Dopo cena</p>
+            <p class="dc-body">Se prevedete di ballare a lungo, potrebbe tornarvi utile portare un secondo cambio d'abito.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="dc-restriction">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="12"/>
+          <line x1="12" y1="16" x2="12.01" y2="16"/>
+        </svg>
+        <p>Per ragioni legate alla location, non ci è purtroppo possibile accogliere <strong>bambini</strong> e <strong>animali domestici</strong>. Vi ringraziamo per la comprensione.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATION -->
+  <section class="section section-dark" id="location">
+    <div class="container-wide">
+      <div class="venue-grid">
+        <div class="venue-text">
+          <p class="section-label light">La Location</p>
+          <h2 class="section-title light">Villa Walter<br/>Fontana</h2>
+          <p class="venue-desc">
+            Progettata a metà anni '60 dall'Architetto Giacomo Mantegazza come residenza privata, Villa Walter Fontana è una dimora di altissima rappresentanza che si estende per 2.000 m² ed è circondata da un parco secolare in posizione dominante nel cuore della Brianza.
+          </p>
+          <p class="venue-desc">
+            La grande passione per l'arte di Walter Fontana è ancora oggi visibile nelle numerose opere che adornano il parco e la villa — sculture che dialogano con la natura, silenziose e potenti.
+          </p>
+          <a class="venue-address" href="https://maps.google.com/?q=Via+Resegone+2+20836+Capriano+MB" target="_blank" rel="noopener">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+            Via Resegone 2 · 20836 Capriano MB
+          </a>
+        </div>
+        <div class="venue-photos">
+          <div class="photo-grid">
+            <div class="photo-item photo-tall">
+              <img src="img/villa-garden.jpg" alt="Parco Villa Walter Fontana" loading="lazy" />
+            </div>
+            <div class="photo-item photo-small">
+              <img src="img/villa-sculpture-1.jpg" alt="Scultura nel parco" loading="lazy" />
+            </div>
+            <div class="photo-item photo-small">
+              <img src="img/villa-pool.jpg" alt="Vista villa" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY FULL-WIDTH -->
+  <section class="gallery-strip">
+    <div class="gallery-item">
+      <img src="img/villa-exterior.jpg" alt="Villa Walter Fontana" loading="lazy" />
+    </div>
+    <div class="gallery-item">
+      <img src="img/villa-sculpture-2.jpg" alt="Sculture nel parco" loading="lazy" />
+    </div>
+    <div class="gallery-item">
+      <img src="img/villa-interior.jpg" alt="Interno villa" loading="lazy" />
+    </div>
+  </section>
+
+  <!-- INFO -->
+  <section class="section" id="info">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-label">Dettagli Pratici</p>
+        <h2 class="section-title">Come Arrivare</h2>
+      </div>
+      <div class="info-grid">
+        <div class="info-card">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <line x1="3" y1="9" x2="21" y2="9"/>
+              <line x1="9" y1="21" x2="9" y2="9"/>
+            </svg>
+          </div>
+          <h3>Data &amp; Ora</h3>
+          <p>Sabato 13 Giugno 2026<br/>Cerimonia alle ore 16:00</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/>
+              <circle cx="12" cy="9" r="2.5"/>
+            </svg>
+          </div>
+          <h3>Location</h3>
+          <p>Villa Walter Fontana<br/>Via Resegone 2 · Capriano MB</p>
+        </div>
+        <div class="info-card">
+          <div class="info-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4">
+              <circle cx="12" cy="12" r="10"/>
+              <polyline points="12,6 12,12 16,14"/>
+            </svg>
+          </div>
+          <h3>Da Milano</h3>
+          <p>Circa 40 minuti in auto<br/>Via A52 / SS36</p>
+        </div>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2791.5!2d9.2632!3d45.7012!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zVmlhIFJlc2Vnb25lIDIsIENhcHJpYW5v!5e0!3m2!1sit!2sit!4v1"
+          width="100%" height="360" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade" title="Villa Walter Fontana"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <h2 class="footer-title">JULIA &amp; ANDREA</h2>
+      <p class="footer-date">13 · 06 · 2026</p>
+      <p class="footer-venue">Villa Walter Fontana · Capriano</p>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
