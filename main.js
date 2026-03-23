@@ -72,7 +72,7 @@ if (siteBg) {
 //     return ContentService.createTextOutput('ok');
 //   }
 
-const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzb70t4qz--mR4TnluH-b5bYk38JW_6t7yapWHEdYuhLAXoszcF_MP7zh-8mWNTY5co/exec';
+const SHEET_URL = 'https://script.google.com/macros/s/AKfycbzuZ3HHjYgL8cEaoMjqdgfqH53pdXDMvYp5wZC4UJ8lBEJlFxSRQm8OltChlQPAQgsh/exec';
 
 // ── Hidden iframe + form for CORS-free submission ──
 const hiddenIframe = document.createElement('iframe');
@@ -91,7 +91,7 @@ const fieldNames = [
   'plus_nome', 'plus_cognome',
   'navetta', 'corsa_andata_15',
   'corsa_ritorno_00', 'corsa_ritorno_02',
-  'dieta', 'allergie', 'dieta_plus', 'allergie_plus',
+  'vegetariano', 'allergie', 'vegetariano_plus', 'allergie_plus',
   'indirizzo', 'cap', 'citta'
 ];
 
@@ -175,9 +175,9 @@ document.getElementById('rsvp-no').addEventListener('click', async () => {
     corsa_andata_15: '',
     corsa_ritorno_00: '',
     corsa_ritorno_02: '',
-    dieta: '',
+    vegetariano: '',
     allergie: '',
-    dieta_plus: '',
+    vegetariano_plus: '',
     allergie_plus: '',
     indirizzo: '',
     cap: '',
@@ -222,9 +222,8 @@ document.getElementById('step-2-back').addEventListener('click', () => showStep(
 document.getElementById('step-2-next').addEventListener('click', () => showStep(2));
 document.getElementById('step-3-back').addEventListener('click', () => showStep(1));
 document.getElementById('step-3-next').addEventListener('click', () => {
-  // Show +1 diet fields if +1 is selected
+  // Show +1 allergy fields if +1 is selected
   const hasPlus = document.querySelector('.rsvp-toggle[data-plus="yes"]')?.classList.contains('active');
-  document.getElementById('dieta-plus-wrap').style.display = hasPlus ? '' : 'none';
   document.getElementById('allergie-plus-wrap').style.display = hasPlus ? '' : 'none';
   showStep(3);
 });
@@ -266,9 +265,9 @@ rsvpForm.addEventListener('submit', async (e) => {
     corsa_andata_15: fd.get('corsa_andata_15') || '',
     corsa_ritorno_00: fd.get('corsa_ritorno_00') || '',
     corsa_ritorno_02: fd.get('corsa_ritorno_02') || '',
-    dieta: fd.get('dieta') || '',
+    vegetariano: fd.get('vegetariano') || 'No',
     allergie: fd.get('allergie') || '',
-    dieta_plus: fd.get('dieta_plus') || '',
+    vegetariano_plus: fd.get('vegetariano_plus') || 'No',
     allergie_plus: fd.get('allergie_plus') || '',
     indirizzo: fd.get('indirizzo') || '',
     cap: fd.get('cap') || '',

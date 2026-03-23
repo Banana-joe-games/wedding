@@ -256,36 +256,29 @@
           </div>
         </div>
 
-        <!-- Step 4: Allergie / Preferenze alimentari -->
+        <!-- Step 4: Allergie -->
         <div class="modal-step" id="step-4" style="display:none;">
-          <p class="modal-step-label">4 / 5 — Alimentazione</p>
-          <div class="modal-field">
-            <label for="rsvp-dieta">Preferenze alimentari</label>
-            <select id="rsvp-dieta" name="dieta">
-              <option value="Nessuna">Nessuna preferenza</option>
-              <option value="Vegetariano">Vegetariano</option>
-              <option value="Vegano">Vegano</option>
-              <option value="Celiaco">Celiaco / Senza glutine</option>
-              <option value="Altro">Altro</option>
-            </select>
+          <p class="modal-step-label">4 / 5 — Allergie</p>
+          <label class="navetta-check">
+            <input type="checkbox" name="vegetariano" value="Sì" />
+            <span class="navetta-check-box"></span>
+            <span>Sono vegetariano/a</span>
+          </label>
+          <div class="modal-field" style="margin-top:16px;">
+            <label for="rsvp-allergie">Allergie</label>
+            <textarea id="rsvp-allergie" name="allergie" rows="2" placeholder="Es. frutta secca, crostacei, lattosio..."></textarea>
           </div>
-          <div class="modal-field">
-            <label for="rsvp-allergie">Allergie o intolleranze</label>
-            <textarea id="rsvp-allergie" name="allergie" rows="2" placeholder="Es. lattosio, frutta secca, crostacei..."></textarea>
-          </div>
-          <div class="modal-field" id="dieta-plus-wrap" style="display:none;">
-            <label for="rsvp-dieta-plus">Preferenze alimentari +1</label>
-            <select id="rsvp-dieta-plus" name="dieta_plus">
-              <option value="Nessuna">Nessuna preferenza</option>
-              <option value="Vegetariano">Vegetariano</option>
-              <option value="Vegano">Vegano</option>
-              <option value="Celiaco">Celiaco / Senza glutine</option>
-              <option value="Altro">Altro</option>
-            </select>
-          </div>
-          <div class="modal-field" id="allergie-plus-wrap" style="display:none;">
-            <label for="rsvp-allergie-plus">Allergie o intolleranze +1</label>
-            <textarea id="rsvp-allergie-plus" name="allergie_plus" rows="2" placeholder="Es. lattosio, frutta secca, crostacei..."></textarea>
+          <div id="allergie-plus-wrap" style="display:none; margin-top:20px; padding-top:20px; border-top:1px solid var(--light-gray);">
+            <p class="modal-step-label" style="margin-bottom:12px;">Accompagnatore</p>
+            <label class="navetta-check">
+              <input type="checkbox" name="vegetariano_plus" value="Sì" />
+              <span class="navetta-check-box"></span>
+              <span>Vegetariano/a</span>
+            </label>
+            <div class="modal-field" style="margin-top:16px;">
+              <label for="rsvp-allergie-plus">Allergie +1</label>
+              <textarea id="rsvp-allergie-plus" name="allergie_plus" rows="2" placeholder="Es. frutta secca, crostacei, lattosio..."></textarea>
+            </div>
           </div>
           <div class="modal-nav">
             <button type="button" class="modal-back" id="step-4-back">Indietro</button>
