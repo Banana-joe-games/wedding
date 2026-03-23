@@ -156,19 +156,44 @@ document.getElementById('rsvp-yes').addEventListener('click', () => {
   openModal();
 });
 
-// "Non ci sarò" → send decline directly
-document.getElementById('rsvp-no').addEventListener('click', async () => {
-  const nome = prompt('Il tuo nome e cognome, per favore:');
-  if (!nome || !nome.trim()) return;
+// Decline modal
+const declineModal = document.getElementById('decline-modal');
+const declineForm = document.getElementById('decline-form');
 
+function openDeclineModal() {
+  declineModal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+function closeDeclineModal() {
+  declineModal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('rsvp-no').addEventListener('click', () => {
   rsvpFeedback.textContent = '';
   rsvpFeedback.className = 'rsvp-feedback';
+  openDeclineModal();
+});
 
-  const parts = nome.trim().split(/\s+/);
+document.getElementById('decline-close').addEventListener('click', closeDeclineModal);
+declineModal.addEventListener('click', (e) => {
+  if (e.target === declineModal) closeDeclineModal();
+});
+
+declineForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const nome = document.getElementById('decline-nome').value.trim();
+  const cognome = document.getElementById('decline-cognome').value.trim();
+  if (!nome || !cognome) return;
+
+  const submitBtn = document.getElementById('decline-submit');
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
+
   const payload = {
-    risposta: 'Non ci sarò',
-    nome: parts[0] || '',
-    cognome: parts.slice(1).join(' ') || '',
+    risposta: 'Toasting from afar',
+    nome: nome,
+    cognome: cognome,
     plus_nome: '',
     plus_cognome: '',
     navetta: 'No',
@@ -186,11 +211,16 @@ document.getElementById('rsvp-no').addEventListener('click', async () => {
 
   try {
     await sendToSheet(payload);
-    rsvpFeedback.textContent = 'Ci mancherai! Grazie per avercelo fatto sapere.';
+    closeDeclineModal();
+    declineForm.reset();
+    rsvpFeedback.textContent = 'We\'ll miss you! Thanks for letting us know.';
     rsvpFeedback.classList.add('success');
   } catch {
-    rsvpFeedback.textContent = 'Errore nell\'invio. Riprova tra poco.';
+    rsvpFeedback.textContent = 'Something went wrong. Please try again.';
     rsvpFeedback.classList.add('error');
+  } finally {
+    submitBtn.disabled = false;
+    submitBtn.textContent = 'Confirm';
   }
 });
 
@@ -256,7 +286,7 @@ rsvpForm.addEventListener('submit', async (e) => {
   const submitBtn = document.getElementById('rsvp-submit');
 
   const payload = {
-    risposta: 'Ci sarò',
+    risposta: 'I\'ll be there',
     nome: fd.get('nome'),
     cognome: fd.get('cognome'),
     plus_nome: fd.get('plus_nome') || '',
@@ -275,7 +305,7 @@ rsvpForm.addEventListener('submit', async (e) => {
   };
 
   submitBtn.disabled = true;
-  submitBtn.textContent = 'Invio in corso...';
+  submitBtn.textContent = 'Sending...';
 
   try {
     await sendToSheet(payload);
@@ -288,10 +318,10 @@ rsvpForm.addEventListener('submit', async (e) => {
     document.getElementById('plus-fields').style.display = 'none';
     document.getElementById('shuttle-fields').style.display = 'none';
 
-    rsvpFeedback.textContent = 'Perfetto, ci vediamo il 13 giugno!';
+    rsvpFeedback.textContent = 'See you on June 13th!';
     rsvpFeedback.classList.add('success');
   } catch {
-    rsvpFeedback.textContent = 'Errore nell\'invio. Riprova tra poco.';
+    rsvpFeedback.textContent = 'Something went wrong. Please try again.';
     rsvpFeedback.classList.add('error');
   } finally {
     submitBtn.disabled = false;
