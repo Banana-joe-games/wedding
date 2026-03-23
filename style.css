@@ -525,13 +525,20 @@ ul { list-style: none; }
   line-height: 1.7;
   color: var(--text-muted);
 }
-
-/* MAP */
-.map-wrapper {
-  border-radius: 6px;
-  overflow: hidden;
-  border: 1px solid rgba(255,255,255,0.25);
+.info-map-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 10px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--wine);
+  border-bottom: 1px solid rgba(61,23,41,0.25);
+  padding-bottom: 2px;
+  transition: border-color 0.2s;
 }
+.info-map-link:hover { border-color: var(--wine); }
 
 /* ─────────────────────────────────────────
    FOOTER
