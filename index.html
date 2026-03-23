@@ -176,7 +176,7 @@
       <form id="rsvp-form">
         <!-- Step 1: Dati personali -->
         <div class="modal-step" id="step-1">
-          <p class="modal-step-label">1 / 3 — I tuoi dati</p>
+          <p class="modal-step-label">1 / 5 — I tuoi dati</p>
           <div class="modal-form-row">
             <div class="modal-field">
               <label for="rsvp-nome">Nome</label>
@@ -192,7 +192,7 @@
 
         <!-- Step 2: +1 -->
         <div class="modal-step" id="step-2" style="display:none;">
-          <p class="modal-step-label">2 / 3 — Accompagnatore</p>
+          <p class="modal-step-label">2 / 5 — Accompagnatore</p>
           <div class="modal-field">
             <label>Hai un accompagnatore?</label>
             <div class="rsvp-toggle-row">
@@ -220,7 +220,7 @@
 
         <!-- Step 3: Navetta -->
         <div class="modal-step" id="step-3" style="display:none;">
-          <p class="modal-step-label">3 / 3 — Navetta</p>
+          <p class="modal-step-label">3 / 5 — Navetta</p>
           <div class="modal-field">
             <label>Vi serve la navetta?</label>
             <div class="rsvp-toggle-row">
@@ -252,6 +252,67 @@
           </div>
           <div class="modal-nav">
             <button type="button" class="modal-back" id="step-3-back">Indietro</button>
+            <button type="button" class="modal-next" id="step-3-next">Avanti</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Allergie / Preferenze alimentari -->
+        <div class="modal-step" id="step-4" style="display:none;">
+          <p class="modal-step-label">4 / 5 — Alimentazione</p>
+          <div class="modal-field">
+            <label for="rsvp-dieta">Preferenze alimentari</label>
+            <select id="rsvp-dieta" name="dieta">
+              <option value="Nessuna">Nessuna preferenza</option>
+              <option value="Vegetariano">Vegetariano</option>
+              <option value="Vegano">Vegano</option>
+              <option value="Celiaco">Celiaco / Senza glutine</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+          <div class="modal-field">
+            <label for="rsvp-allergie">Allergie o intolleranze</label>
+            <textarea id="rsvp-allergie" name="allergie" rows="2" placeholder="Es. lattosio, frutta secca, crostacei..."></textarea>
+          </div>
+          <div class="modal-field" id="dieta-plus-wrap" style="display:none;">
+            <label for="rsvp-dieta-plus">Preferenze alimentari +1</label>
+            <select id="rsvp-dieta-plus" name="dieta_plus">
+              <option value="Nessuna">Nessuna preferenza</option>
+              <option value="Vegetariano">Vegetariano</option>
+              <option value="Vegano">Vegano</option>
+              <option value="Celiaco">Celiaco / Senza glutine</option>
+              <option value="Altro">Altro</option>
+            </select>
+          </div>
+          <div class="modal-field" id="allergie-plus-wrap" style="display:none;">
+            <label for="rsvp-allergie-plus">Allergie o intolleranze +1</label>
+            <textarea id="rsvp-allergie-plus" name="allergie_plus" rows="2" placeholder="Es. lattosio, frutta secca, crostacei..."></textarea>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back" id="step-4-back">Indietro</button>
+            <button type="button" class="modal-next" id="step-4-next">Avanti</button>
+          </div>
+        </div>
+
+        <!-- Step 5: Indirizzo -->
+        <div class="modal-step" id="step-5" style="display:none;">
+          <p class="modal-step-label">5 / 5 — Indirizzo</p>
+          <p class="modal-step-hint">Per l'invio delle partecipazioni</p>
+          <div class="modal-field">
+            <label for="rsvp-indirizzo">Indirizzo</label>
+            <input type="text" id="rsvp-indirizzo" name="indirizzo" placeholder="Via Roma 1" />
+          </div>
+          <div class="modal-form-row">
+            <div class="modal-field">
+              <label for="rsvp-cap">CAP</label>
+              <input type="text" id="rsvp-cap" name="cap" placeholder="20100" />
+            </div>
+            <div class="modal-field">
+              <label for="rsvp-citta">Città</label>
+              <input type="text" id="rsvp-citta" name="citta" placeholder="Milano" />
+            </div>
+          </div>
+          <div class="modal-nav">
+            <button type="button" class="modal-back" id="step-5-back">Indietro</button>
             <button type="submit" class="modal-next modal-submit" id="rsvp-submit">Invia</button>
           </div>
         </div>
