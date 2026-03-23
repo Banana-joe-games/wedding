@@ -57,7 +57,7 @@ body {
 ───────────────────────────────────────── */
 .site-bg {
   position: fixed;
-  inset: -40px;          /* extra space for parallax shift */
+  inset: -120px;         /* extra space for parallax shift */
   z-index: 0;
   pointer-events: none;
   will-change: transform;

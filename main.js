@@ -44,8 +44,8 @@ window.addEventListener('scroll', updateNav, { passive: true });
 const siteBg = document.querySelector('.site-bg');
 if (siteBg) {
   window.addEventListener('scroll', () => {
-    const y = window.scrollY * 0.08;
-    siteBg.style.transform = `translateY(${y}px)`;
+    const y = Math.min(window.scrollY * 0.04, 80);
+    siteBg.style.transform = `translateY(-${y}px)`;
   }, { passive: true });
 }
 
