@@ -536,6 +536,65 @@ ul { list-style: none; }
 /* ─────────────────────────────────────────
    FOOTER
 ───────────────────────────────────────── */
+/* GIFT REGISTRY */
+.registry-content {
+  max-width: 520px;
+}
+.registry-text {
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--wine);
+  margin-bottom: 32px;
+}
+.registry-card {
+  background: rgba(255,255,255,0.5);
+  backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 32px;
+  border: 1px solid rgba(255,255,255,0.3);
+}
+.registry-store {
+  font-family: var(--font-sans);
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--wine);
+  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+}
+.registry-address {
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--wine);
+  margin-bottom: 12px;
+}
+.registry-detail {
+  font-size: 14px;
+  color: var(--wine);
+  opacity: 0.7;
+  margin-bottom: 4px;
+}
+.registry-hours {
+  font-size: 13px;
+  color: var(--wine);
+  opacity: 0.5;
+  margin-top: 12px;
+  letter-spacing: 0.04em;
+}
+.registry-link {
+  display: inline-block;
+  margin-top: 20px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--wine);
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--wine);
+  padding-bottom: 2px;
+  transition: opacity 0.2s;
+}
+.registry-link:hover {
+  opacity: 0.6;
+}
+
 .footer {
   position: relative;
   z-index: 1;
